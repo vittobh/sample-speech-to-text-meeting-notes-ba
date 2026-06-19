@@ -1,0 +1,13 @@
+{"transcript":[
+{"speaker":"Vittobha","text":"Welcome everyone, this week we ship the agentic KYC pilot."},
+{"speaker":"Anna","text":"We need final sign-off on the eval threshold."},
+{"speaker":"Vittobha","text":"Set it at 99% precision per Promptfoo run."},
+{"speaker":"Raj","text":"I will draft the rollback plan by Thursday."},
+{"speaker":"Anna","text":"And I will own the comms to bank ops by Friday."}
+],
+"summary":"Agentic KYC pilot ships this week. Eval threshold confirmed at 99% precision (Promptfoo-gated). Rollback plan and bank ops comms owned and dated.",
+"actions":[
+{"task":"Draft rollback plan","owner":"Raj","due":"Thu"},
+{"task":"Comms to bank ops","owner":"Anna","due":"Fri"},
+{"task":"Finalise Promptfoo eval config","owner":"Vittobha","due":"Wed"}
+]}

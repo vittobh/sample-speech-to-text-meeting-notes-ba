@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Meeting Notes — Live Transcription + AI Summary</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"></head>
+<body><header>
+<div><h1>Meeting Notes — Live Transcription + AI Summary</h1><div class="tagline">Multi-agent: Whisper · diarisation · action-item extraction · email draft</div></div>
+<button id="theme-toggle" class="theme-toggle">☾ Dark</button>
+</header><main>
+<div id="ai-banner" class="banner" style="display:none"></div>
+<div class="row" style="margin-bottom:1rem">
+  <span class="dim">Live AI keys:</span>
+  <button class="btn btn-ghost" onclick="app.setKey('anthropic')">+ Claude</button>
+  <button class="btn btn-ghost" onclick="app.setKey('gemini')">+ Gemini</button>
+  <button class="btn btn-ghost" onclick="app.setKey('grok')">+ Grok</button>
+</div>
+<div class="grid" style="grid-template-columns:2fr 1fr">
+  <div class="card"><h3>Live Transcription</h3>
+    <div class="row" style="margin-bottom:.5rem">
+      <button class="btn btn-primary" id="start" onclick="startMeeting()">▶ Start</button>
+      <button class="btn" onclick="stopMeeting()">■ Stop</button>
+      <span class="dim" id="status">Idle</span>
+    </div>
+    <div id="transcript" class="card" style="min-height:200px;max-height:300px;overflow:auto;background:var(--surface-2);font-size:.85rem"></div>
+  </div>
+  <div class="card"><h3>🤖 AI Summary</h3>
+    <div id="summary" class="dim" style="font-size:.85rem">Start meeting to populate summary.</div>
+    <h3 style="margin-top:1rem">Action Items</h3>
+    <ul id="actions" style="margin:0;padding-left:1.2rem;font-size:.85rem"></ul>
+    <button class="btn btn-primary" style="margin-top:.5rem" onclick="sendEmail()">Send notes via email</button>
+  </div>
+</div>
+</main>
+<script src="app.js"></script><script src="page.js"></script>
+</body></html>
